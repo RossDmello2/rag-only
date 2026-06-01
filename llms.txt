@@ -1,0 +1,18 @@
+# rag-only
+
+Static browser-only document RAG assistant for local Ollama and Qdrant workflows.
+
+## Read First
+
+- `README.md`: user quick start, architecture summary, and repository structure.
+- `AGENTS.md`: project-specific coding-agent boundaries and verification gates.
+- `docs/features/README.md`: feature ownership map for future changes.
+- `docs/architecture/README.md`: runtime flow and data boundaries.
+- `docs/operations/PRODUCT_SHAPE_DECISION.md`: why this project remains a static browser app.
+
+## Hard Boundaries
+
+- Preserve the static HTML/CSS/JS product shape unless a backend-proxy feature is explicitly requested.
+- Do not add browser-side cloud API key fields.
+- Do not edit `docs/archive/script_fixed.legacy.js` as runtime code.
+- Run `npm run check:syntax`, `npm test`, `npm run test:e2e`, and `npm audit --audit-level=high` before claiming completion.

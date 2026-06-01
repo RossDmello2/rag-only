@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="rag-only is a static browser RAG assistant for local document chat with Ollama embeddings, Qdrant vector search, and no cloud API keys." />
+  <meta name="application-name" content="rag-only" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta property="og:title" content="rag-only | Local Browser RAG Assistant" />
+  <meta property="og:description" content="Upload PDF, TXT, DOCX, or CSV files and ask questions against local Ollama and Qdrant services from a static browser app." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/RossDmello2/rag-only" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="rag-only | Local Browser RAG Assistant" />
+  <meta name="twitter:description" content="Static local-first document RAG for Ollama and Qdrant. No backend and no client-side cloud keys." />
+  <title>rag-only | Local Browser RAG Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mammoth@1.12.0/mammoth.browser.min.js"></script>
+  <script type="module" src="script.js" defer></script>
+</head>
+<body>
+  <button id="chatToggle" class="chat-toggle" aria-label="Open assistant">
+    💬
+  </button>
+
+  <section id="chatPanel" class="chat-panel hidden" aria-label="Document assistant">
+    <header class="chat-header">
+      <div>
+        <h1>Document Assistant</h1>
+        <div class="status-row">
+          <span id="ollamaStatus" class="status-pill status-unknown">Ollama</span>
+          <span id="qdrantStatus" class="status-pill status-unknown">Qdrant</span>
+          <span id="modeBadge" class="status-pill status-neutral">Local</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="settingsButton" class="icon-button" title="Settings" aria-label="Settings">⚙</button>
+        <button id="clearChatButton" class="icon-button" title="Clear chat" aria-label="Clear chat">🧹</button>
+        <button id="closePanel" class="icon-button" title="Close" aria-label="Close">✕</button>
+      </div>
+    </header>
+
+    <div id="protocolWarning" class="banner hidden">
+      Serve these files through localhost, not file://, or browser requests may fail.
+    </div>
+
+    <div id="messages" class="messages" aria-live="polite"></div>
+
+    <div id="typingIndicator" class="typing hidden">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="composer-wrap">
+      <div id="selectedFileBar" class="selected-file hidden">
+        <span id="selectedFileName"></span>
+        <button id="removeFileButton" class="icon-button" aria-label="Remove selected file">✕</button>
+      </div>
+
+      <div id="runtimeStatus" class="runtime-status">Ready.</div>
+
+      <div class="composer">
+        <input id="fileInput" type="file" accept=".pdf,.txt,.docx,.csv" hidden />
+        <button id="attachButton" class="icon-button" title="Attach file" aria-label="Attach file">📎</button>
+        <textarea id="messageInput" rows="1" placeholder="Upload a file, ask a question, or do both."></textarea>
+        <button id="sendButton" class="send-button" aria-label="Send">➤</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="settingsModal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Assistant settings">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Settings</h2>
+        <button id="closeSettings" class="icon-button" aria-label="Close settings">✕</button>
+      </div>
+
+      <div class="settings-grid">
+        <label>
+          <span>Ollama URL</span>
+          <input id="ollamaUrlInput" type="text" />
+        </label>
+
+        <label>
+          <span>Qdrant URL</span>
+          <input id="qdrantUrlInput" type="text" />
+        </label>
+
+        <label>
+          <span>Collection</span>
+          <input id="collectionInput" type="text" />
+        </label>
+
+        <label>
+          <span>Embedding model</span>
+          <input id="embeddingModelInput" type="text" />
+        </label>
+
+        <label>
+          <span>Local chat model</span>
+          <input id="localChatModelInput" type="text" />
+        </label>
+
+        <label>
+          <span>Chunk size</span>
+          <input id="chunkSizeInput" type="number" min="200" max="3000" step="50" />
+        </label>
+
+        <label>
+          <span>Chunk overlap</span>
+          <input id="chunkOverlapInput" type="number" min="0" max="1000" step="10" />
+        </label>
+
+        <label>
+          <span>Top K</span>
+          <input id="topKInput" type="number" min="1" max="20" step="1" />
+        </label>
+
+        <label>
+          <span>Score threshold</span>
+          <input id="scoreThresholdInput" type="number" min="0" max="1" step="0.01" />
+        </label>
+
+        <label>
+          <span>Memory turns</span>
+          <input id="memoryTurnsInput" type="number" min="0" max="12" step="1" />
+        </label>
+      </div>
+
+      <p class="settings-note">
+        This build is plain HTML/CSS/JS for local Ollama and Qdrant services.
+        Browser calls go to your host machine, so localhost is correct.
+        Cloud LLM keys need a backend proxy and are intentionally not supported here.
+      </p>
+
+      <div class="modal-actions">
+        <button id="healthCheckButton" class="secondary-button">Check services</button>
+        <button id="saveSettingsButton" class="primary-button">Save</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
