@@ -1,16 +1,22 @@
-# rag-only: Local Browser RAG Assistant
+# rag-only
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node.js 22+](https://img.shields.io/badge/node-%3E%3D22-339933.svg)
 ![Static App](https://img.shields.io/badge/runtime-static%20browser-2563eb.svg)
 
-`rag-only` is a static, local-first document RAG assistant for PDF, TXT, DOCX, and CSV chat using Ollama embeddings, Ollama chat models, and Qdrant vector search from a browser-only app.
+**Browser-only document RAG for local Ollama + Qdrant.**
 
-It is for developers and local AI users who want a minimal document question-answering workflow without a hosted backend and without putting cloud model API keys in browser settings. The app is useful as a local reference implementation, a controlled demo, or a starting point for a future backend-proxy architecture.
+`rag-only` is a static, local-first document chat app for PDF, TXT, DOCX, and CSV files. It runs as plain browser JavaScript, extracts and chunks documents in the browser, stores vectors in Qdrant, and asks a local Ollama chat model to answer from retrieved context.
+
+It is for developers, local AI builders, students, and technical evaluators who want to understand or demo a minimal retrieval-augmented generation workflow without a hosted backend and without putting cloud model API keys into browser settings.
+
+![Conceptual local document RAG workflow for rag-only; generated supporting artwork, not a product screenshot](docs/assets/brand/social-preview.jpg)
+
+_Conceptual supporting artwork. Real product screenshots are below._
 
 ## Preview
 
-These are real captures of the current app UI. The workflow screenshot uses sanitized sample text and mocked local Ollama/Qdrant responses so the repository preview does not depend on private local services.
+These are real captures of the current app UI. The workflow screenshot uses sanitized sample text and mocked local Ollama/Qdrant responses so the repository preview does not depend on private files, tokens, or local service data.
 
 ![rag-only assistant home screen with local Ollama and Qdrant status pills](docs/assets/screenshots/home.png)
 
@@ -30,6 +36,26 @@ These are real captures of the current app UI. The workflow screenshot uses sani
 - Sends retrieved context to a local Ollama chat model for grounded answers.
 - Stores non-secret settings in browser `localStorage`.
 - Keeps cloud model API key fields out of the browser UI by design.
+
+## Why It Exists
+
+Many document chat demos hide the retrieval pipeline behind a framework, hosted API, or backend service. `rag-only` keeps the moving parts visible:
+
+- Browser document parsing and chat UI.
+- Ollama embeddings and local chat completion calls.
+- Qdrant vector writes, dedupe checks, and active-document search.
+- Small, testable helper logic in `src/rag-core.js`.
+
+That makes the project useful as a learning repo, a local demo, or a starting point before adding a backend proxy, authentication, hosted model support, or production storage controls.
+
+## Who It Is For
+
+| Audience | What they can evaluate quickly |
+| --- | --- |
+| Beginners learning RAG | The end-to-end flow from upload to chunks, embeddings, vector search, and answer generation |
+| Local AI users | A browser UI for Ollama + Qdrant document chat on a trusted machine |
+| Professional engineers | Static-app boundaries, security caveats, CI coverage, and extension points |
+| Maintainers | A small repo with feature docs, tests, issue templates, and contributor guidance |
 
 ## What It Does Not Do Yet
 
@@ -130,6 +156,8 @@ docker run --rm -p 6333:6333 qdrant/qdrant
 ```
 
 macOS/Linux shells use the same npm and Ollama commands. If Docker is unavailable, run Qdrant with any local installation method that exposes `http://localhost:6333` to the browser.
+
+First successful run should show green Ollama and Qdrant status pills, let you upload a supported document, and return an answer based on retrieved local context.
 
 ## Configuration
 
@@ -239,14 +267,15 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md), and the matchin
 
 ## Discoverability
 
-Suggested GitHub topics:
+Current GitHub topics should stay aligned with the inspected source:
 
 ```text
 rag, retrieval-augmented-generation, document-chat, ollama, qdrant,
-local-first, browser, static-site, vector-search, pdf-chat
+local-first, browser, static-site, vector-search, pdf-chat,
+javascript, document-search, document-qa, semantic-search, local-llm
 ```
 
-See [SEO and discoverability](docs/seo-discoverability.md).
+See [SEO and discoverability](docs/seo-discoverability.md) and the [naming and SEO strategy](docs/NAMING_SEO_STRATEGY.md).
 
 ## Current Status
 

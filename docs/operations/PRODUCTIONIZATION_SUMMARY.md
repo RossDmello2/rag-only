@@ -91,9 +91,9 @@ Final verification is recorded in `docs/operations/VERIFICATION_MATRIX.md`.
 - Placeholder scan: PASS, no unreplaced template tokens found.
 - `.env` scan: PASS, no `.env` files present.
 
-## Blockers and Evidence
+## Historical Blockers and Evidence
 
-- CodeRabbit review is blocked until this folder is initialized or placed inside a git repository and CodeRabbit CLI/auth are available.
+- CodeRabbit review was blocked during the 2026-05-17 pass because the folder was not yet initialized or placed inside a git repository and CodeRabbit CLI/auth were not available.
 
 ## Known Remaining Issues
 
@@ -102,8 +102,8 @@ Final verification is recorded in `docs/operations/VERIFICATION_MATRIX.md`.
 
 ## Recommended Next Actions
 
-- Initialize a git repository or move these files into the intended GitHub repository.
-- Run CodeRabbit after git and CLI authentication are available.
+- Use the published GitHub repository and normal branch/PR workflow for future changes.
+- Run CodeRabbit only if the CLI/auth path is available and useful for a specific review.
 - Add a backend-proxy feature only if cloud LLM support becomes required.
 
 PRODUCTIONIZATION COMPLETE
@@ -154,7 +154,7 @@ PRODUCTIONIZATION COMPLETE
 
 ### Known Remaining Issues
 
-- The folder is still not a git repository, so branch status, remote validation, PR creation, and GitHub Actions execution could not be verified locally.
+- The repository is now initialized and published at `https://github.com/RossDmello2/rag-only`; branch status and remote validation should be verified during each publication pass.
 - Public multi-user deployment still requires a backend proxy, auth, provider-key isolation, and Qdrant access control.
 - CDN dependencies are pinned by version but not vendored or protected by a deployed CSP/SRI strategy.
 

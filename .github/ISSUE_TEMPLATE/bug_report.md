@@ -10,6 +10,8 @@ assignees: ""
 
 Describe the problem.
 
+Do not attach private documents, customer data, real logs with tokens, browser profile data, API keys, local Qdrant payload dumps, or screenshots that show private file contents. Use a small synthetic file whenever possible.
+
 ## Steps To Reproduce
 
 1. Serve the app.
@@ -23,6 +25,12 @@ Describe what should happen.
 ## Actual Behavior
 
 Describe what happened instead.
+
+## Safe Evidence
+
+- Minimal synthetic file or text sample:
+- Browser console/network error with secrets removed:
+- Screenshot with private content redacted:
 
 ## Environment
 

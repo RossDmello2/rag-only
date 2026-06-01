@@ -20,6 +20,8 @@ Also confirm:
 - Qdrant is reachable at the URL configured in Settings.
 - The required Ollama embedding and chat models are installed locally.
 
+Use synthetic or redacted examples in public issues. Do not upload private documents, real customer data, local database exports, API keys, browser cookies, or screenshots that expose sensitive file contents.
+
 ## Where To Ask
 
 - Reproducible bugs: open a bug report with browser, Node, Ollama, and Qdrant versions.

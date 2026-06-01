@@ -11,12 +11,15 @@ All notable changes to this project are documented here.
 - Contributor-facing feature map under `docs/features/`.
 - Repository discoverability and static deployment guidance.
 - Browser metadata for clearer title, snippets, and social previews.
+- Naming and SEO strategy report with scored identity recommendations.
+- Conceptual README hero and social-preview artwork under `docs/assets/brand/`.
 
 ### Changed
 
 - Expanded README for public GitHub presentation with preview images, tech stack, status, and verified commands.
 - Expanded `.gitignore` to exclude local service data, traces, videos, private analysis notes, and common generated artifacts.
 - Documented feature-change expectations in contributor and agent guidance.
+- Reframed the README opening around the browser-only local document RAG value proposition.
 
 ### Fixed
 

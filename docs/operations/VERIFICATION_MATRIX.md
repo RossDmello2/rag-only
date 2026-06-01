@@ -9,7 +9,7 @@ Date: 2026-05-17
 | Dependency audit | `npm audit --audit-level=high` | PASS | 0 vulnerabilities |
 | Placeholder scan | `rg` scan for unreplaced project, author, GitHub, and temporary planning tokens | PASS | No matches |
 | Secrets file check | `Get-ChildItem -Force -Filter '.env*'` | PASS | No `.env` files present |
-| Git status | `git status --short` | BLOCKED | Folder is not a git repository |
+| Git status | `git status --short` | HISTORICAL BLOCKED | The 2026-05-17 pass ran before the folder was initialized as the published Git repository |
 | CodeRabbit | CodeRabbit review | BLOCKED | Requires a git repository and CLI/auth |
 
 ## Final Command Evidence
@@ -38,7 +38,7 @@ Result: exit 1 from rg because no matches were found
 | Local browser smoke | Playwright against `http://127.0.0.1:8010/` with Ollama/Qdrant routes mocked | PASS | Title, heading, assistant panel, meta description, and console-error-free render verified |
 | Placeholder scan | `rg` scan for unreplaced template tokens | PASS | No matches; `rg` exited 1 because nothing was found |
 | Secrets file check | `Get-ChildItem -Force -Filter '.env*'` | PASS | No `.env` files present |
-| Git status | `git status --short` | BLOCKED | Folder is not a git repository |
+| Git status | `git status --short --branch` | PASS | Repository is initialized on `main` with `origin` set to `https://github.com/RossDmello2/rag-only.git` |
 
 ```text
 npm run verify
