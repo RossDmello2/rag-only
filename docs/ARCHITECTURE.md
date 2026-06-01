@@ -1,6 +1,6 @@
 # Architecture
 
-`rag-only` is a static browser-only RAG app. Node is used for local serving and tests, not for the product runtime.
+LocalDoc RAG is a static browser-only RAG app. Node is used for local serving and tests, not for the product runtime.
 
 ## Component Flow
 

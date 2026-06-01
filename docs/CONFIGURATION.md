@@ -1,6 +1,6 @@
 # Configuration
 
-`rag-only` does not read `.env` files or process environment variables at runtime. Configuration lives in the browser Settings modal and is saved to browser `localStorage`.
+LocalDoc RAG does not read `.env` files or process environment variables at runtime. Configuration lives in the browser Settings modal and is saved to browser `localStorage`.
 
 ## Settings
 

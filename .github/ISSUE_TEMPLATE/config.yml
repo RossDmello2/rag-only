@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Support guide
-    url: https://github.com/RossDmello2/rag-only/blob/main/SUPPORT.md
+    url: https://github.com/RossDmello2/local-doc-rag/blob/main/SUPPORT.md
     about: Read setup checks, local service expectations, and reporting guidance before opening an issue.

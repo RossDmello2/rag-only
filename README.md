@@ -1,4 +1,4 @@
-# rag-only
+# LocalDoc RAG
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node.js 22+](https://img.shields.io/badge/node-%3E%3D22-339933.svg)
@@ -6,11 +6,13 @@
 
 **Browser-only document RAG for local Ollama + Qdrant.**
 
-`rag-only` is a static, local-first document chat app for PDF, TXT, DOCX, and CSV files. It runs as plain browser JavaScript, extracts and chunks documents in the browser, stores vectors in Qdrant, and asks a local Ollama chat model to answer from retrieved context.
+LocalDoc RAG is a static, local-first document chat app for PDF, TXT, DOCX, and CSV files. It runs as plain browser JavaScript, extracts and chunks documents in the browser, stores vectors in Qdrant, and asks a local Ollama chat model to answer from retrieved context.
+
+The GitHub repository was renamed from `rag-only` to `local-doc-rag` for clearer discovery. The current package/app identifier remains `rag-only` in runtime metadata until a separate core-file edit is approved.
 
 It is for developers, local AI builders, students, and technical evaluators who want to understand or demo a minimal retrieval-augmented generation workflow without a hosted backend and without putting cloud model API keys into browser settings.
 
-![Conceptual local document RAG workflow for rag-only; generated supporting artwork, not a product screenshot](docs/assets/brand/social-preview.jpg)
+![Conceptual local document RAG workflow for LocalDoc RAG; generated supporting artwork, not a product screenshot](docs/assets/brand/social-preview.jpg)
 
 _Conceptual supporting artwork. Real product screenshots are below._
 
@@ -18,13 +20,13 @@ _Conceptual supporting artwork. Real product screenshots are below._
 
 These are real captures of the current app UI. The workflow screenshot uses sanitized sample text and mocked local Ollama/Qdrant responses so the repository preview does not depend on private files, tokens, or local service data.
 
-![rag-only assistant home screen with local Ollama and Qdrant status pills](docs/assets/screenshots/home.png)
+![LocalDoc RAG assistant home screen with local Ollama and Qdrant status pills](docs/assets/screenshots/home.png)
 
-![rag-only document question-answer workflow with a sample TXT file](docs/assets/screenshots/main-workflow.png)
+![LocalDoc RAG document question-answer workflow with a sample TXT file](docs/assets/screenshots/main-workflow.png)
 
-![rag-only settings modal for local service URLs, models, chunking, and retrieval controls](docs/assets/screenshots/settings.png)
+![LocalDoc RAG settings modal for local service URLs, models, chunking, and retrieval controls](docs/assets/screenshots/settings.png)
 
-![rag-only mobile assistant layout](docs/assets/screenshots/mobile.png)
+![LocalDoc RAG mobile assistant layout](docs/assets/screenshots/mobile.png)
 
 ## What It Does
 
@@ -39,7 +41,7 @@ These are real captures of the current app UI. The workflow screenshot uses sani
 
 ## Why It Exists
 
-Many document chat demos hide the retrieval pipeline behind a framework, hosted API, or backend service. `rag-only` keeps the moving parts visible:
+Many document chat demos hide the retrieval pipeline behind a framework, hosted API, or backend service. LocalDoc RAG keeps the moving parts visible:
 
 - Browser document parsing and chat UI.
 - Ollama embeddings and local chat completion calls.
@@ -134,8 +136,8 @@ The archived original implementation remains at `docs/archive/script_fixed.legac
 From a fresh clone:
 
 ```powershell
-git clone https://github.com/RossDmello2/rag-only.git
-cd rag-only
+git clone https://github.com/RossDmello2/local-doc-rag.git
+cd local-doc-rag
 npm install
 npx playwright install chromium
 npm run serve
@@ -236,7 +238,7 @@ The Playwright suite starts the static server automatically and mocks Ollama/Qdr
 
 ## Deployment
 
-`rag-only` is deployable as static files only for controlled environments where the user's browser can safely reach trusted Ollama and Qdrant services. Public internet deployment as a shared RAG product requires a backend proxy, authentication, provider-key isolation, request validation, rate limiting, and Qdrant access control.
+LocalDoc RAG is deployable as static files only for controlled environments where the user's browser can safely reach trusted Ollama and Qdrant services. Public internet deployment as a shared RAG product requires a backend proxy, authentication, provider-key isolation, request validation, rate limiting, and Qdrant access control.
 
 See [Deployment](docs/deployment.md).
 

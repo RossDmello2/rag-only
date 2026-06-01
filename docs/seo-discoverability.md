@@ -43,14 +43,14 @@ Avoid topics such as `offline`, `langchain`, `webllm`, `chroma`, `faiss`, `agent
 Recommended GitHub About description:
 
 ```text
-Browser-only local document RAG for PDF/TXT/DOCX/CSV chat with Ollama, Qdrant, and plain JavaScript.
+LocalDoc RAG: browser-only local document RAG for PDF/TXT/DOCX/CSV chat with Ollama, Qdrant, and plain JavaScript.
 ```
 
 Leave the website field empty until a working hosted demo exists. Do not invent a GitHub Pages, Netlify, Vercel, or other homepage URL before it has been deployed and smoke-tested.
 
 ## Naming Strategy
 
-The current repo slug `rag-only` should stay unless the owner explicitly approves a rename. The strongest rename candidate is `local-doc-rag`, but a rename affects URLs, clones, bookmarks, and downstream references.
+The repository slug was renamed from `rag-only` to `local-doc-rag` after explicit owner approval. The source package/app identifier still appears as `rag-only` in protected runtime/package files until a separate core-file edit is approved.
 
 See [Naming And SEO Strategy](NAMING_SEO_STRATEGY.md) for the scored candidate matrix and recommendation.
 

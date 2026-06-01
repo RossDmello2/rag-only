@@ -1,6 +1,6 @@
 # Architecture
 
-`rag-only` is a static browser-only RAG app.
+LocalDoc RAG is a static browser-only RAG app.
 
 ## Runtime Flow
 

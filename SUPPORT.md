@@ -1,6 +1,6 @@
 # Support
 
-`rag-only` is a local-first static browser app. Most setup problems come from the browser being unable to reach Ollama, Qdrant, or the static file server.
+LocalDoc RAG is a local-first static browser app. Most setup problems come from the browser being unable to reach Ollama, Qdrant, or the static file server.
 
 ## Before Opening An Issue
 

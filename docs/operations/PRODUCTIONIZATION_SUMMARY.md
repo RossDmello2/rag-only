@@ -1,7 +1,7 @@
 # Productionization Summary
 
 Date: 2026-05-17
-Project: rag-only
+Project: LocalDoc RAG (formerly `rag-only`)
 Product shape: static browser-only RAG assistant
 Product shape decision: `docs/operations/PRODUCT_SHAPE_DECISION.md`
 
@@ -154,7 +154,7 @@ PRODUCTIONIZATION COMPLETE
 
 ### Known Remaining Issues
 
-- The repository is now initialized and published at `https://github.com/RossDmello2/rag-only`; branch status and remote validation should be verified during each publication pass.
+- The repository is now initialized and published at `https://github.com/RossDmello2/local-doc-rag`; branch status and remote validation should be verified during each publication pass.
 - Public multi-user deployment still requires a backend proxy, auth, provider-key isolation, and Qdrant access control.
 - CDN dependencies are pinned by version but not vendored or protected by a deployed CSP/SRI strategy.
 

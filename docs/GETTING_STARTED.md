@@ -1,12 +1,12 @@
 # Getting Started
 
-This guide takes a fresh clone to a running local `rag-only` app.
+This guide takes a fresh clone to a running local LocalDoc RAG app.
 
 ## 1. Install Node Dependencies
 
 ```powershell
-git clone https://github.com/RossDmello2/rag-only.git
-cd rag-only
+git clone https://github.com/RossDmello2/local-doc-rag.git
+cd local-doc-rag
 npm install
 npx playwright install chromium
 ```

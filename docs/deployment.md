@@ -1,6 +1,6 @@
 # Deployment
 
-`rag-only` is deployable as a static site, but only for environments where the user's browser can safely reach Ollama and Qdrant.
+LocalDoc RAG is deployable as a static site, but only for environments where the user's browser can safely reach Ollama and Qdrant.
 
 ## Static Hosting
 

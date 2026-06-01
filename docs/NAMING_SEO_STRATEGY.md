@@ -2,15 +2,17 @@
 
 Generated: 2026-06-01
 
-This report is a source-grounded identity and discoverability pass for `rag-only`. It recommends presentation and metadata changes only. It does not authorize renaming the GitHub repository; a repository rename still needs explicit owner approval because it changes URLs, clones, and downstream references.
+This report is a source-grounded identity and discoverability pass for the project formerly published as `rag-only`.
+
+Owner approval for a repository rename was given after the first publication pass. The GitHub repository was then renamed to `RossDmello2/local-doc-rag`. Runtime and package files were not renamed in that follow-up because `index.html` and `package.json` are protected core files under the repository-publication rules unless a separate exact edit is approved.
 
 ## Current Identity Audit
 
 | Area | Current state | Evidence |
 | --- | --- | --- |
-| Repository | `RossDmello2/rag-only` | `gh repo view RossDmello2/rag-only` reported a public repo with default branch `main`. |
+| Repository | `RossDmello2/local-doc-rag` | `gh repo view RossDmello2/local-doc-rag` reported a public repo with default branch `main` after owner-approved rename. |
 | README title | `rag-only: Local Browser RAG Assistant` before this pass | `README.md` before this update. |
-| Package name | `rag-only` | `package.json` declares `"name": "rag-only"`. |
+| Package/app identifier | `rag-only` | `package.json` declares `"name": "rag-only"`; runtime files were not edited during the rename follow-up. |
 | GitHub description before this pass | `Static local-first document RAG assistant for Ollama, Qdrant, and browser-only PDF/TXT/DOCX/CSV chat.` | `gh repo view RossDmello2/rag-only`. |
 | Topics before this pass | `browser`, `document-chat`, `local-first`, `ollama`, `pdf-chat`, `qdrant`, `rag`, `retrieval-augmented-generation`, `static-site`, `vector-search` | `gh repo view RossDmello2/rag-only --json repositoryTopics`. |
 | First-paragraph clarity | Accurate but a little dense for non-technical visitors | The original opening led with static/local-first/RAG/Ollama/Qdrant in one sentence. |
@@ -18,21 +20,21 @@ This report is a source-grounded identity and discoverability pass for `rag-only
 
 What is working:
 
-- The current slug is short and distinctive.
+- The original `rag-only` slug was short and distinctive.
 - The README already states the real stack and limitations.
 - Screenshots are real product captures with sanitized mocked data.
 - Community files, CI, CodeQL, Dependabot, and feature docs are already present.
 
 What is weak:
 
-- `rag-only` is memorable but not self-explanatory in search results without a strong description.
+- `rag-only` was memorable but not self-explanatory in search results without a strong description.
 - Exact phrases such as `browser-only RAG` and `static browser RAG` appear less common than `document chat`, `PDF chat`, `Ollama`, `Qdrant`, and `local RAG`.
 - The README needed a clearer first five seconds for non-technical visitors.
 - GitHub social preview needs manual upload; storing an image in the repo does not automatically set the repository preview.
 
 ## Source-Backed Project Identity
 
-`rag-only` is a static browser document RAG assistant. The runtime is `index.html`, `style.css`, `script.js`, and `src/rag-core.js`; Node is used for local serving and tests, not as an app backend.
+LocalDoc RAG is a static browser document RAG assistant. The runtime is `index.html`, `style.css`, `script.js`, and `src/rag-core.js`; Node is used for local serving and tests, not as an app backend.
 
 Strongest differentiators:
 
@@ -88,7 +90,7 @@ Observed pattern from live GitHub and web research:
 
 Comparable repository examples:
 
-| Repository | Pattern observed | Relevance to `rag-only` |
+| Repository | Pattern observed | Relevance to LocalDoc RAG |
 | --- | --- | --- |
 | [curiousily/ragbase](https://github.com/curiousily/ragbase) | Local RAG with "chat with PDF documents" language and topics such as `rag`, `retrieval-augmented-generation`, and `streamlit` | Good evidence that `local RAG`, `chat with PDF`, and `RAG` are common discovery terms; stack is different. |
 | [poloclub/mememo](https://github.com/poloclub/mememo) | Browser-oriented vector search/RAG positioning | Useful adjacent pattern for `browser`, `document-search`, `rag`, and `vector-search` language. |
@@ -137,23 +139,23 @@ Scores are 1-10. Higher is better.
 
 ## Top 3 Recommended Names
 
-### 1. Keep `rag-only` As The Repo Slug For Now
+### 1. Applied After Approval: `LocalDoc RAG`
 
-- Display name: `rag-only`
-- README title: `rag-only`
+- Display name: `LocalDoc RAG`
+- README title: `LocalDoc RAG`
 - Tagline: `Browser-only document RAG for local Ollama + Qdrant.`
-- GitHub description: `Browser-only local document RAG for PDF/TXT/DOCX/CSV chat with Ollama, Qdrant, and plain JavaScript.`
+- GitHub description: `LocalDoc RAG: browser-only local document RAG for PDF/TXT/DOCX/CSV chat with Ollama, Qdrant, and plain JavaScript.`
 - Recommended topics: `rag`, `retrieval-augmented-generation`, `document-chat`, `pdf-chat`, `ollama`, `qdrant`, `local-first`, `browser`, `static-site`, `vector-search`, `javascript`, `document-search`, `document-qa`, `semantic-search`, `local-llm`
-- Risk/tradeoff: the slug is less self-explanatory than `local-doc-rag`, so the README opening and GitHub description must carry the search terms.
+- Risk/tradeoff: the GitHub slug is now clearer, but protected runtime/package metadata still uses `rag-only` until separately approved.
 
-### 2. Rename Candidate: `LocalDoc RAG`
+### 2. Alternate Candidate Considered: `LocalDoc RAG`
 
 - Display name: `LocalDoc RAG`
 - Repo slug: `local-doc-rag`
 - Tagline: `Local document chat with Ollama, Qdrant, and a static browser UI.`
 - GitHub description: `Static local document RAG assistant for PDF/TXT/DOCX/CSV chat using Ollama, Qdrant, and browser JavaScript.`
 - Recommended topics: same as above.
-- Risk/tradeoff: better search clarity, but renaming breaks the existing `rag-only` URL unless redirects are relied on.
+- Risk/tradeoff: this became the approved display name and slug direction; public docs now use the new `local-doc-rag` URL.
 
 ### 3. Rename Candidate: `BrowserDoc RAG`
 
@@ -174,21 +176,25 @@ Scores are 1-10. Higher is better.
 
 ## Final Recommendation
 
-Keep the actual GitHub repository slug as `rag-only` unless the owner explicitly approves a rename. The best immediate improvement is to keep the short distinctive name while making the title, first paragraph, GitHub description, topics, screenshots, and social preview explain the exact project category.
-
-If a rename is approved later, the strongest slug is:
+The rename recommendation was approved and applied. The GitHub repository slug is now:
 
 ```text
 local-doc-rag
 ```
 
-Potential rename command only after explicit approval:
+The old `rag-only` GitHub URL currently resolves to the renamed repository through GitHub's redirect behavior, but public docs should use the new URL:
 
-```powershell
-gh repo rename local-doc-rag --repo RossDmello2/rag-only
+```text
+https://github.com/RossDmello2/local-doc-rag
 ```
 
-Do not run that command without owner approval.
+Runtime/package metadata remains a documented gap because protected core files were not edited in this rename-only follow-up.
+
+```powershell
+gh repo rename -R RossDmello2/rag-only local-doc-rag --yes
+```
+
+Command status: completed after owner approval.
 
 ## Research Sources
 

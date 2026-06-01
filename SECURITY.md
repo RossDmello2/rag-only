@@ -6,7 +6,7 @@ The `main` branch is the supported development line.
 
 ## Reporting a Vulnerability
 
-Use GitHub private vulnerability reporting for `RossDmello2/rag-only` when the repository is published. Do not open a public issue for suspected secrets, credential exposure, or exploitable parsing behavior.
+Use GitHub private vulnerability reporting for `RossDmello2/local-doc-rag` when the repository is published. Do not open a public issue for suspected secrets, credential exposure, or exploitable parsing behavior.
 
 If private vulnerability reporting is not enabled yet, contact the maintainer through the GitHub repository owner profile and include a minimal reproduction, affected browser/runtime version, and impact. Do not include real secrets or private documents.
 

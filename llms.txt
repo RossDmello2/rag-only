@@ -1,4 +1,4 @@
-# rag-only
+# LocalDoc RAG
 
 Static browser-only document RAG assistant for local Ollama and Qdrant workflows.
 

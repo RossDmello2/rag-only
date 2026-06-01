@@ -38,7 +38,7 @@ Result: exit 1 from rg because no matches were found
 | Local browser smoke | Playwright against `http://127.0.0.1:8010/` with Ollama/Qdrant routes mocked | PASS | Title, heading, assistant panel, meta description, and console-error-free render verified |
 | Placeholder scan | `rg` scan for unreplaced template tokens | PASS | No matches; `rg` exited 1 because nothing was found |
 | Secrets file check | `Get-ChildItem -Force -Filter '.env*'` | PASS | No `.env` files present |
-| Git status | `git status --short --branch` | PASS | Repository is initialized on `main` with `origin` set to `https://github.com/RossDmello2/rag-only.git` |
+| Git status | `git status --short --branch` | PASS | Repository is initialized on `main` with `origin` set to `https://github.com/RossDmello2/local-doc-rag.git` after the owner-approved rename |
 
 ```text
 npm run verify
